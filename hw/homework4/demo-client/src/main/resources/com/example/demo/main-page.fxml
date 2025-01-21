@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="466.0" prefWidth="566.0" styleClass="main-div" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainHandler">
+   <Pane prefHeight="466.0" prefWidth="567.0">
+      <children>
+         <VBox layoutY="7.0" prefHeight="164.0" prefWidth="215.0" spacing="5">
+            <padding>
+               <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <Button mnemonicParsing="false" onAction="#createGame" prefHeight="38.0" prefWidth="145.0" styleClass="custom-button" text="创建对局" />
+            <Button mnemonicParsing="false" onAction="#queryClientList" prefHeight="38.0" prefWidth="159.0" styleClass="custom-button" text="查看在线客户端" />
+            <Button mnemonicParsing="false" onAction="#joinGame" prefHeight="38.0" prefWidth="149.0" styleClass="custom-button" text="加入对局" />
+            <Button mnemonicParsing="false" onAction="#queryAllHistory" prefHeight="38.0" prefWidth="153.0" styleClass="custom-button" text="查询历史对局" />
+            <Button mnemonicParsing="false" onAction="#quit" prefHeight="38.0" prefWidth="153.0" styleClass="custom-button" text="退出" />
+         </VBox>
+      </children>
+   </Pane>
+</AnchorPane>

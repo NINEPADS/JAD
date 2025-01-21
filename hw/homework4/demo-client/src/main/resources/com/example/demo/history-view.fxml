@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="402.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HistoryHandler">
+   <children>
+      <TableView fx:id="historyList" prefHeight="402.0" prefWidth="771.0">
+        <columns>
+            <TableColumn fx:id="recordId" prefWidth="59.99997025728226" text="对局编号" />
+          <TableColumn fx:id="whiteUsername" prefWidth="113.40002822875977" text="白方用户" />
+          <TableColumn fx:id="blackUsername" prefWidth="110.59996032714844" text="黑方用户" />
+            <TableColumn fx:id="startTime" prefWidth="242.20004272460938" text="开始时间" />
+            <TableColumn fx:id="endTime" minWidth="0.0" prefWidth="243.4000244140625" text="结束时间" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

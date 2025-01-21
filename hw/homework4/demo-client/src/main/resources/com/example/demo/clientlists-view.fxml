@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ClientListHandler" stylesheets="@style.css">
+   <children>
+      <TableView fx:id="clientList" layoutX="-1.0" prefHeight="400.0" prefWidth="606.0" styleClass="table-view">
+        <columns>
+          <TableColumn fx:id="userNameColumn" prefWidth="209.19997864961624" text="用户名" />
+            <TableColumn fx:id="portColumn" prefWidth="230.8000030517578" text="端口" />
+          <TableColumn fx:id="stateColumn" prefWidth="166.99996948242188" text="状态" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

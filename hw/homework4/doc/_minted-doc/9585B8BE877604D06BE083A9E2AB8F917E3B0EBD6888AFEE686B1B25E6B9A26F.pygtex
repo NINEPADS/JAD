@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{MainHandler}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{// 客户端与服务端通信的Socket}
+\PYG{+w}{            }\PYG{n}{Socket}\PYG{+w}{ }\PYG{n}{socket}\PYG{p}{;}
+\PYG{+w}{            }\PYG{c+c1}{// 客户端通过out向服务端发送信息}
+\PYG{+w}{            }\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{;}
+\PYG{+w}{            }\PYG{c+c1}{// 绑定查询在线用户按钮方法}
+\PYG{+w}{            }\PYG{c+c1}{// 其他辅助成员变量略去}
+\PYG{+w}{            }\PYG{n+nd}{@FXML}
+\PYG{+w}{            }\PYG{k+kd}{protected}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{queryClientList}\PYG{p}{(}\PYG{n}{ActionEvent}\PYG{+w}{ }\PYG{n}{event}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{// 绑定查询用户历史对局按钮方法}
+\PYG{+w}{            }\PYG{n+nd}{@FXML}
+\PYG{+w}{            }\PYG{k+kd}{protected}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{queryAllHistory}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{// 绑定用户退出按钮方法}
+\PYG{+w}{            }\PYG{n+nd}{@FXML}
+\PYG{+w}{            }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{quit}\PYG{p}{(}\PYG{n}{ActionEvent}\PYG{+w}{ }\PYG{n}{event}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{// 绑定用户创建对局按钮方法}
+\PYG{+w}{            }\PYG{n+nd}{@FXML}
+\PYG{+w}{            }\PYG{k+kd}{protected}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{createGame}\PYG{p}{(}\PYG{n}{ActionEvent}\PYG{+w}{ }\PYG{n}{event}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{// 绑定用户加入对局按钮方法}
+\PYG{+w}{            }\PYG{n+nd}{@FXML}
+\PYG{+w}{            }\PYG{k+kd}{protected}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{joinGame}\PYG{p}{(}\PYG{n}{ActionEvent}\PYG{+w}{ }\PYG{n}{event}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{            }\PYG{c+c1}{//其他辅助成员函数略去}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

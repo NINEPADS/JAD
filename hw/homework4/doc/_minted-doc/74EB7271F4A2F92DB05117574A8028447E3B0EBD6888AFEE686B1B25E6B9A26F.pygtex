@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{ReceiveMessageHandler}\PYG{+w}{ }\PYG{k+kd}{implements}\PYG{+w}{ }\PYG{n}{Runnable}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// 与服务端通信的socket}
+\PYG{+w}{        }\PYG{n}{Socket}\PYG{+w}{ }\PYG{n}{socket}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 负责接收服务器信息}
+\PYG{+w}{        }\PYG{n}{BufferedReader}\PYG{+w}{ }\PYG{n}{in}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 和主界面线程共享的窗口}
+\PYG{+w}{        }\PYG{n}{Stage}\PYG{+w}{ }\PYG{n}{stage}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 创建该线程的主线稡端响应退出对局}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{quitGame}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务端响应终止对局}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{overGame}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务端响应获取并展示在线客户端}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{clientList}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{response}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务器响应设置登录状态}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{login}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务器响应开始对局}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{startGame}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{response}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务器响应获取并展示该用户所以对局记录}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{showAllHistory}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{response}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 接收服务器响应获取并展示具体棋谱}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{showRecord}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{response}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 其他辅助成员函数略去}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

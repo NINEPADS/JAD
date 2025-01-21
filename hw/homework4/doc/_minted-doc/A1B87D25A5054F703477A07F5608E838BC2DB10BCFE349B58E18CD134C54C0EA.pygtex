@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{o}{`}\PYG{n}{record}\PYG{o}{`}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{black\PYGZus{}username}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{white\PYGZus{}username}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{content}\PYG{o}{`}\PYG{+w}{ }\PYG{n+nb}{text}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{start\PYGZus{}time}\PYG{o}{`}\PYG{+w}{ }\PYG{n}{datetime}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o}{`}\PYG{n}{end\PYGZus{}time}\PYG{o}{`}\PYG{+w}{ }\PYG{n}{datetime}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{+w}{        }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{`}\PYG{n}{id}\PYG{o}{`}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{)}\PYG{+w}{ }\PYG{n}{ENGINE}\PYG{o}{=}\PYG{n}{InnoDB}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{o}{=}\PYG{l+m+mi}{19}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{n}{CHARSET}\PYG{o}{=}\PYG{n}{utf8mb4}
+\end{Verbatim}

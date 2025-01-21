@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{DatabaseManager}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{DB\PYGZus{}URL}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}略去\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{DB\PYGZus{}USER}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}略去\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{DB\PYGZus{}PASSWORD}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}略去\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 通过con对数据库进行操作}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{n}{Connection}\PYG{+w}{ }\PYG{n}{con}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 查询是否存在该用户，如果有就返回其id，否则返回\PYGZhy{}1}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{n}{Integer}\PYG{+w}{ }\PYG{n+nf}{login}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{password}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 往数据库插入该用户的信息，如果成功返回true}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{n}{Boolean}\PYG{+w}{ }\PYG{n+nf}{register}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{password}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 往数据库中插入对局的记录}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{gameRecord}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{black\PYGZus{}username}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{white\PYGZus{}username}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{content}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Timestamp}\PYG{+w}{ }\PYG{n}{start\PYGZus{}time}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Timestamp}\PYG{+w}{ }\PYG{n}{end\PYGZus{}time}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 查询某个用户参与的对局记录并返回记录（不包含棋谱）的列表}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Record}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf}{queryAllRecords}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{user\PYGZus{}name}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 查询某个id的记录并返回记录的棋谱}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n+nf}{queryRecord}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

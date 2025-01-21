@@ -1,0 +1,43 @@
+.record-view-table-scroll-pane {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-insets: 5px; /* 内边距 */
+    -fx-border-radius: 10px; /* 圆角半径 */
+}
+.record-view-table-title-text {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+}
+
+.custom-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-size: x-large;
+    -fx-text-fill: white;
+}
+.login-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-size: x-large;
+    -fx-text-fill: #4f4f4f;
+}
+
+.custom-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 5);
+}
+
+.main-div {
+    -fx-background-image: url("../../../images/background1.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.table-view {
+    -fx-background-color: lightgray;
+    -fx-alignment: center;
+}
+

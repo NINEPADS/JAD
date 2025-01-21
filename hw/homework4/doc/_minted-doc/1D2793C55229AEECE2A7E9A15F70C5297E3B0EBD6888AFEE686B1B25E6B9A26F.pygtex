@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{ClientHandler}\PYG{+w}{ }\PYG{k+kd}{implements}\PYG{+w}{ }\PYG{n}{Runnable}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// 登录用户信息，包含用户名、id、端口等}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{ClientInfo}\PYG{+w}{ }\PYG{n}{clientInfo}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 在线用户表}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{Map}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ClientInfo}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{clients}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 等待开始的对局表}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{Map}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Game}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{waitingGames}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 正在进行的对局表}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{Map}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Game}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{runningGames}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 在线用户的用户名表（用于快速查询用户是否登录）}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{Set}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{loggedUsers}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{// 发送在线客户端表到客户端}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{sendClientsList}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 发生对局记录到客户端}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{queryAllHistory}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端是否可以创建对局}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{createGame}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端是否可以加入对局}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{joinGame}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端是否可以在特定位置放置棋子}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{placeChess}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端退出对局（对局中止）}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{quitGame}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端结束对局（对局结束）}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{overGame}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端是否登录成功}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{login}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{inputLine}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 通知客户端是否注册成功}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{register}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{inputLine}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{        }\PYG{c+c1}{// 发生对局棋谱到客户端}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{queryRecord}\PYG{p}{(}\PYG{n}{PrintWriter}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{inputLine}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

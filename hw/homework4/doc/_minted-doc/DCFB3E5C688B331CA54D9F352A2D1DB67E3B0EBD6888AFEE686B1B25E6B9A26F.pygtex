@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{RegisterHandler}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nd}{@FXML}\PYG{+w}{ }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{n}{TextField}\PYG{+w}{ }\PYG{n}{usernameField}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nd}{@FXML}\PYG{+w}{ }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{n}{PasswordField}\PYG{+w}{ }\PYG{n}{passwordField}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n+nd}{@FXML}
+\PYG{+w}{        }\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{handleRegister}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="363.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginHandler">
+    <children>
+      <VBox alignment="CENTER" prefHeight="51.0" prefWidth="363.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="101.0" text="用户登录" textFill="#4b4b4bc2">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="30.0" layoutY="74.0" prefHeight="200.0" prefWidth="304.0">
+         <children>
+            <GridPane prefHeight="102.0" prefWidth="255.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.6" minWidth="10.0" prefWidth="303.6" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="0.0" prefWidth="0.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="52.599999999999994" minHeight="10.0" prefHeight="50.599999999999994" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                    <TextField fx:id="usernameField" prefHeight="30.0" prefWidth="304.0" promptText="请输入用户名...">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                    <PasswordField fx:id="passwordField" prefHeight="30.0" prefWidth="304.0" promptText="请输入密码..." GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></PasswordField>
+               </children>
+            </GridPane>
+            <Pane prefHeight="70.0" prefWidth="304.0">
+               <children>
+                    <Button contentDisplay="CENTER" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="23.0" prefWidth="61.0" styleClass="login-button" text="登录" textFill="#4f4f4f">
+                     <font>
+                        <Font name="Microsoft YaHei Light" size="15.0" />
+                     </font></Button>
+                    <Button layoutX="229.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="30.0" prefWidth="61.0" styleClass="login-button" text="注册" textFill="#4f4f4f">
+                     <font>
+                        <Font name="Microsoft YaHei Light" size="15.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+        <Label layoutX="-176.0" layoutY="316.0" prefHeight="20.0" prefWidth="65.0" text="用户名" textAlignment="RIGHT" textFill="#4b4b4b">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+        <Label layoutX="-21.0" layoutY="401.0" prefHeight="20.0" prefWidth="62.0" text="密码" textFill="#4b4b4b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
